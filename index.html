@@ -1,28 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Registration Form</title>
   </head>
   <body>
     <h2>Event Registration Form</h2>
-    <Form action="success.html"method="GET">
-      Name:
-      <input type="text"name="username"required>
-      <br><br>
-      Gender:
-      <input type="radio"name="gender"value="male"required>male
-      <input type="radio"name="gender"value="female">female
-      <br><br>
-      Department
-      <select name="department"required>
-        <option value="CSE">CSE</option>
-        <option value="ECE">ECE</option>
-        <option value="EEE">EEE</option>
-        <option value="Mechanical">Mechanical</option>
-        <option value="Civil">Civil</option>
-      </select>
-      <br><br>
-      <input type="submit"value="Register">
-    </Form>
+    <form action="success.html" method="POST">
+      
+      <p>
+        <label for="username">Name:</label>
+        <input type="text" id="username" name="username" required>
+      </p>
+      
+      <p>
+        Gender:
+        <label>
+          <input type="radio" name="gender" value="male" required> Male
+        </label>
+        <label>
+          <input type="radio" name="gender" value="female"> Female
+        </label>
+      </p>
+      
+      <p>
+        <label for="department">Department:</label>
+        <select id="department" name="department" required>
+          <option value="" disabled selected>Select your department</option>
+          <option value="CSE">CSE</option>
+          <option value="ECE">ECE</option>
+          <option value="EEE">EEE</option>
+          <option value="Mechanical">Mechanical</option>
+          <option value="Civil">Civil</option>
+        </select>
+      </p>
+      
+      <p>
+        <button type="submit">Register</button>
+      </p>
+      
+    </form>
   </body>
 </html>
